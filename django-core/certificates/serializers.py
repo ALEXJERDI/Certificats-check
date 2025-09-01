@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from certificates.models import Certificate, Team, SMTPConfig, ScanFrequency
+from certificates.models import Certificate, Team
+
 
 class CertificateSerializer(serializers.ModelSerializer):
     class Meta:
@@ -10,13 +11,7 @@ class CertificateSerializer(serializers.ModelSerializer):
 class TeamSerializer(serializers.ModelSerializer):
     class Meta:
         model = Team
-        fields = '__all__'
-
-
-class SMTPConfigSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = SMTPConfig
-        fields = '__all__'
+        fields = ["id", "name", "default_alert_days", "default_emails"]
 
 
 

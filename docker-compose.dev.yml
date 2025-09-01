@@ -1,0 +1,51 @@
+version: "3.9"
+
+services:
+  django:
+    image: python:3.11
+    working_dir: /app
+    volumes:
+      - ./django-core:/app
+    env_file: .env
+    command: >
+      bash -lc "
+      python -m pip install --upgrade pip &&
+      pip install --no-cache-dir -r /app/requirements.txt &&
+      python -m django --version &&
+      python manage.py migrate &&
+      python manage.py runserver 0.0.0.0:8000"
+    ports: ["8000:8000"]
+    restart: unless-stopped
+
+
+  nodeprobe:
+    environment:
+      - DJANGO_API_BASE=http://django:8000   
+    image: node:20
+    working_dir: /app
+    volumes:
+      - ./backend-node:/app
+    env_file: .env
+    command: bash -lc "npm ci && node index.js"
+    ports: ["3000:3000"]
+    restart: unless-stopped
+
+  frontend:
+    image: node:20
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      # helps file-watching on Docker Desktop / Windows
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
+      - BROWSER=none
+    command: >
+      bash -lc "
+      npm ci || npm install &&
+      npx vite --host 0.0.0.0 --port 5173
+      "
+    ports:
+      - "5173:5173"
+    restart: unless-stopped
