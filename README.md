@@ -95,3 +95,17 @@ node index.js
 cd frontend
 npm install
 npm run dev
+
+👉 Ouvrir le navigateur sur http://localhost:5343 (ou le port affiché par Vite).
+
+## 🎬 Démo | Demo
+
+- Screenshots : *(à insérer)*
+- Vidéo démo : *(à insérer)*
+- [Lien Premium](https://example.com/premium)
+
+## 📚 Exemples d’utilisation | Usage Examples
+
+### Vérifier un certificat
+```bash
+python manage.py check_cert --url https://example.com
