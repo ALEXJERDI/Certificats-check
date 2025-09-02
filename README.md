@@ -97,6 +97,8 @@ npm install
 npm run dev
 
 👉 Ouvrir le navigateur sur http://localhost:5343 (ou le port affiché par Vite).
+```
+---
 
 ## 🎬 Démo | Demo
 
@@ -109,3 +111,35 @@ npm run dev
 ### Vérifier un certificat
 ```bash
 python manage.py check_cert --url https://example.com
+```
+
+## 🔐 Sécurité | Security
+
+Merci de signaler toute vulnérabilité en privé :  
+📩 [anashalim100@gmail.com](mailto:anashalim100@gmail.com)
+
+---
+
+## 📈 Roadmap
+
+- [ ] Ajout intégration Slack & Teams  
+- [ ] Dashboard statistiques avancées  
+- [ ] Export CSV/JSON  
+- [ ] API publique Premium  
+
+---
+
+## 🏷️ Licence
+
+Distribué sous **MIT License** – voir [LICENSE](LICENSE).  
+
+---
+
+## 💎 Upgrade Premium
+
+🔥 Passez en **Premium** pour :  
+- Monitorer **10k+ certificats**  
+- Recevoir des alertes avancées  
+- Avoir un support prioritaire  
+
+👉 [Upgrade Premium](https://example.com/premium)
