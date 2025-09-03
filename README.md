@@ -100,18 +100,49 @@ npm run dev
 ```
 ---
 
-## 🎬 Démo | Demo
+## 🎬 Démo en ligne | Live Demo
 
-- Screenshots : *(à insérer)*
-- Vidéo démo : *(à insérer)*
-- [Lien Premium](https://example.com/premium)
+- 🌐 **Live** : https://your-demo-url.example (Vercel/Netlify)
+- 👤 Compte démo : `demo@example.com` / `demo123` (si nécessaire)
+- 🚀 Bouton déploiement :
+  [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)  [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start)
 
-## 📚 Exemples d’utilisation | Usage Examples
+### Statut & badges
+[![Uptime](https://img.shields.io/uptimerobot/ratio/m789012345-abc)](#)
+[![Response Time](https://img.shields.io/endpoint?url=https://your-monitor.example/response.json)](#)
 
-### Vérifier un certificat
-```bash
-python manage.py check_cert --url https://example.com
-```
+> 📝 Remplace `your-demo-url.example` et les endpoints par tes liens réels.
+
+---
+
+## 🖼️ Captures d’écran | Screenshots
+
+<p align="center">
+  <img src="assets/screenshots/dashboard.png" width="48%" alt="Dashboard - état des certificats"/>
+  <img src="assets/screenshots/cert-detail.png" width="48%" alt="Détail d’un certificat"/>
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/team-mapping.png" width="48%" alt="Association certificats ⇄ équipes"/>
+  <img src="assets/screenshots/alerts.png" width="48%" alt="Alertes email / seuils d’expiration"/>
+</p>
+
+> Place tes images dans `assets/screenshots/` et mets les vrais noms de fichiers.
+
+---
+
+## 🧪 Démo rapide en local (GIF)
+
+<p align="center">
+  <img src="assets/screenshots/demo.gif" width="720" alt="Parcours rapide : ajout d’un certificat → alerte"/>
+</p>
+
+> Astuce pour créer `demo.gif` :
+> - macOS : QuickTime (enregistrer l’écran) → convertir en GIF (ezgif.com)
+> - Windows : ScreenToGif
+> - Linux : `peek` ou `ffmpeg`
+
+---
 
 ## 🔐 Sécurité | Security
 
